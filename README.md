@@ -282,3 +282,7 @@ Bộ test dùng thư mục tạm cho mọi dữ liệu và tự tắt SmartDrive
 ### 0.1.0
 
 - Bản đầu: nạp thư viện `<môn>/<bài>/`, tìm kiếm FTS5 có `coverage`, giao thức học, xuất Anki, ghi chú, prompt `learn`/`quiz`/`recap`.
+
+## Giấy phép
+
+MIT License (c) 2026 DuongNAD. Xem [LICENSE](LICENSE).
