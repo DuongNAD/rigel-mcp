@@ -170,6 +170,28 @@ MCP server không gọi nhau trực tiếp; client là bên điều phối. Rige
 
 ## Tích hợp hệ sinh thái
 
+Mọi dự án của DuongNAD:
+
+| Dự án | Vai trò | Kho mã |
+| :--- | :--- | :--- |
+| **Polaris** | Kiến trúc khóa học: nguồn, dữ kiện có vị trí trích, lộ trình, lịch học, Sổ lỗi | [polaris-mcp](https://github.com/DuongNAD/polaris-mcp) |
+| **Aurora Slides** | Bài học kiểu keynote: trắc nghiệm, slide dự đoán và dò code, sự kiện tiến độ | [aurora-slides-mcp](https://github.com/DuongNAD/aurora-slides-mcp) |
+| **Vega** | Bộ nhớ FSRS và hàng đợi ôn tập duy nhất (hộp thư thẻ) | [vega-mcp](https://github.com/DuongNAD/vega-mcp) |
+| **Orion** | Lab thực hành chấm bằng test thật, bậc thang gợi ý, bậc khởi động PRIMM | [orion-mcp](https://github.com/DuongNAD/orion-mcp) |
+| **Mira** | Dò code: trace Python thật, trình phát từng dòng có điểm dừng dự đoán | [mira-mcp](https://github.com/DuongNAD/mira-mcp) |
+| **Rigel** | Gia sư bám tài liệu: trả lời từ tài liệu bài học, có trích dẫn [ref] | [rigel-mcp](https://github.com/DuongNAD/rigel-mcp) |
+| **Sirius** | Vòng thực thi: hạn chót, phân loại việc, hôm nay học gì, bấm giờ, tổng kết tuần | [sirius-mcp](https://github.com/DuongNAD/sirius-mcp) |
+| **Constellation** | Đăng ký MCP, kiểm tra sức khỏe, hợp đồng dữ liệu chung | [constellation-mcp](https://github.com/DuongNAD/constellation-mcp) |
+| **SmartDrive-OS** | Quản trị SSD, chỉ mục và tìm kiếm tài liệu học | [smart-drive-os](https://github.com/DuongNAD/smart-drive-os) |
+
+### Kết nối
+
+- **SmartDrive-OS**: file được tìm qua chỉ mục của SmartDrive-OS (không quét đệ quy).
+- **Vega**: `export_flashcards { to: "vega" }` đưa thẻ vào hộp thư thẻ của Vega.
+- **Polaris và Aurora**: `[ref]` làm vị trí trích (locator) cho dữ kiện của Polaris và làm nguồn (`source`) cho slide của Aurora.
+- **Mira**: dò code tìm thấy trong tài liệu bằng `mira_record`.
+- **Sirius**: `activity.jsonl` (không ghi nội dung truy vấn) cấp dữ liệu cho tổng kết tuần.
+
 ### Vega: một hàng đợi ôn tập duy nhất
 
 `export_flashcards { deck, cards, to: "vega" }` ghi **một file mỗi lần gọi** vào `<hub>/.vega/inbox/` theo hợp đồng `vega-card-inbox.v1` (bản bổ sung 2026-10-13: producer `rigel`, origin `rigel-ref`). Rigel không bao giờ ghi `cards.json` hay `reviews.jsonl` của Vega; Vega tự kiểm tra, loại trùng theo `key` và xếp lịch FSRS ở lần `vega_sync` kế tiếp (hoặc `vega_inbox { action: "ingest" }`).
