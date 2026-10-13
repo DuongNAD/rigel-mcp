@@ -1,0 +1,60 @@
+{
+  "v": 1,
+  "hub": "D:/02_Learning_Knowledge",
+  "exclude": ["__pycache__", ".venv", "venv", "node_modules", ".git", ".ipynb_checkpoints", "polaris"],
+  "maxFileMB": 40,
+  "courses": [
+    {
+      "name": "GCI",
+      "subject": "GCI_World_2026_September",
+      "aliases": ["GCI World", "gci"],
+      "roots": [
+        { "path": "D:/02_Learning_Knowledge/GCI_World_2026_September/03_Materials", "lessons": "subfolders" },
+        {
+          "path": "D:/02_Learning_Knowledge/GCI_World_2026_September/roadmap/ROADMAP.md",
+          "lessons": "file",
+          "lesson": "_lo_trinh"
+        },
+        {
+          "path": "D:/02_Learning_Knowledge/GCI_World_2026_September/06_Notes_Transcripts",
+          "lessons": "single",
+          "lesson": "Bai_giang"
+        }
+      ],
+      "exclude": ["dap_an"]
+    },
+    {
+      "name": "ML",
+      "subject": "Machine_Learning",
+      "aliases": ["Machine Learning", "Học máy", "ml"],
+      "roots": [
+        { "path": "D:/02_Learning_Knowledge/Machine_Learning/02_Supervised_Learning", "lessons": "subfolders" }
+      ]
+    },
+    {
+      "name": "PM",
+      "subject": "Python_Master",
+      "aliases": ["Python Master", "pm", "python"],
+      "roots": [{ "path": "D:/02_Learning_Knowledge/Python_Master", "lessons": "subfolders" }]
+    },
+    {
+      "name": "QC",
+      "subject": "Quantum_Computing",
+      "aliases": ["Quantum Computing", "qc", "quantum"],
+      "roots": [{ "path": "D:/02_Learning_Knowledge/Quantum_Computing", "lessons": "subfolders" }]
+    },
+    {
+      "name": "AMD",
+      "subject": "AMD_AI_Academy_AI_Agents_101",
+      "aliases": ["AMD AI Academy", "amd", "ai agents"],
+      "roots": [
+        { "path": "D:/02_Learning_Knowledge/AMD_AI_Academy_AI_Agents_101/03_Materials_Code", "lessons": "subfolders" },
+        {
+          "path": "D:/02_Learning_Knowledge/AMD_AI_Academy_AI_Agents_101/02_Notes_Summaries",
+          "lessons": "single",
+          "lesson": "Ghi_chu"
+        }
+      ]
+    }
+  ]
+}
