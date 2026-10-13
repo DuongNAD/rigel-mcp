@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/banner.jpg" alt="Rigel MCP — Rigel blazing at Orion's foot beside the Witch Head Nebula" width="100%"></p>
+
 # rigel-mcp
 
 Rigel, "bàn chân" của chòm Orion: câu trả lời đứng trên tài liệu bài học thật.
